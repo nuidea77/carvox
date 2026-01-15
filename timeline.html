@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="About Mongold - Learn about our history, mission, and vision as a growing gold producer in Mongolia. Discover our journey in underground gold mining and commitment to responsible operations.">
+	<meta name="keywords" content="about Mongold, gold mining company Mongolia, Mongold history, about us, gold producer Mongolia, mining company history">
+	<meta name="author" content="Mongold">
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="English">
+	<meta name="revisit-after" content="7 days">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.mongold.com/timeline.html">
+	<meta property="og:title" content="About Us - Mongold | Gold Mining Company in Mongolia">
+	<meta property="og:description" content="Learn about Mongold's journey as a growing gold producer in Mongolia, our mission, vision, and commitment to responsible mining.">
+	<meta property="og:image" content="https://www.mongold.com/images/logo.png">
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://www.mongold.com/timeline.html">
+	<meta property="twitter:title" content="About Us - Mongold | Gold Mining Company in Mongolia">
+	<meta property="twitter:description" content="Discover Mongold's story as a responsible gold producer in Mongolia.">
+	<meta property="twitter:image" content="https://www.mongold.com/images/logo.png">
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://www.mongold.com/timeline.html">
+	<!-- Page Title -->
+    <title>About Us - Mongold | Gold Mining Company in Mongolia</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+<style>
+
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== BODY ===================== */
+
+
+/* ===================== SECTIONS ===================== */
+.section {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* ===================== TIMELINE SECTION ===================== */
+.timeline-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h3 {
+  font-size: 18px;
+  color: #eaa424;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  color: #062743;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===================== TIMELINE WRAPPER ===================== */
+.timeline-scroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.timeline-wrapper {
+  display: flex;
+  gap: 80px;
+  padding: 40px;
+  transition: transform 0.6s ease;
+
+}
+
+/* ===================== TIMELINE ITEM ===================== */
+.timeline-item {
+  min-width: 320px;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  color: #333;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-left: 4px solid #eaa424;
+ 
+}
+
+.timeline-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.timeline-item h2 {
+  font-size: 48px;
+  color: #062743;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.timeline-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+}
+
+
+/* ===================== SCROLL INDICATOR ===================== */
+.scroll-indicator {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator.visible {
+  opacity: 1;
+}
+
+.scroll-indicator .arrow {
+  font-size: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===================== PROGRESS BAR ===================== */
+.timeline-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.timeline-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.timeline-scroll-container.dragging {
+  cursor: grabbing;
+}
+
+.timeline-wrapper {
+  display: flex;
+  gap: 60px;
+  padding: 40px;
+  transform: translateX(0);
+  transition: transform 0.1s ease;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.timeline-item {
+  min-width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: rgba(0,0,0,0.12) 0 8px 24px;
+  border-left: 4px solid #eaa424;
+}
+
+.timeline-item h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  color: #062743;
+}
+
+.timeline-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+.timeline-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.timeline-scroll-container.dragging {
+  cursor: grabbing;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .section-header h2,
+  .operations-header h2 {
+    font-size: 28px;
+  }
+  
+  .timeline-item {
+    min-width: 260px;
+  }
+  
+  .timeline-item h2 {
+    font-size: 36px;
+  }
+  
+  .operations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon"><img src="images/loader.png" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+<header class="main-header">
+		<div class="header-sticky bg-section">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="index.html">
+						<img src="images/logo.png" height="30px" alt="Logo">
+					</a>
+					<!-- Logo End -->
+
+                    <!-- Main Menu Start -->
+                     <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item "><a class="nav-link" href="index.html">Home</a>
+                                    
+                                </li>                                
+                                <li class="nav-item"><a class="nav-link" href="timeline.html">About Us</a>
+                                <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+                                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+    <!-- Page Header Section Start -->
+    <div class="page-header about-us bg-section parallaxie">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box ">
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">About us</h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">About us</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header Section End -->
+ <!-- Why Choose Us Section Start -->
+    <div class="why-choose-us-prime">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6">
+                    <!-- Why Choose Image Box Start -->
+                    <div class="why-choose-image-box-prime wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Why Choose Image Start -->
+                        <div class="why-choose-image-prime">
+                            <figure class="image-anime">
+                                <img src="images/09.webp" alt="">
+                            </figure>
+                        </div>
+                        <!-- Why Choose Image End -->
+
+                        <!-- Experience Year Box Start -->
+                        <div class="experience-year-box-prime">
+                            <!-- Satisfy Client Images Start -->
+                            <div class="satisfy-client-images">
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/author-1.webp" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/author-2.webp" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/author-3.webp" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- Satisfy Client Images End -->
+
+                            <!-- Experience Year Content Start -->
+                            <div class="experience-year-content-prime">
+                                <p>Employees</p>
+                                <h2><span class="counter">500</span>+</h2>
+                            </div>
+                            <!-- Experience Year Content End -->
+                        </div>
+                        <!-- Experience Year Box End -->
+                    </div>
+                    <!-- Why Choose Image Box End -->
+                </div>
+
+                <div class="col-xl-6">
+                    <!-- Why Choose Content Start -->
+                    <div class="why-choose-content-prime">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">About us</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Growing gold producer in Mongolia</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Mongold is a growing pure play underground gold producer in Mongolia, operating the high-grade Naran Mandal underground mine. The company is committed to developing high-grade assets efficiently while creating long-term sustainable value for all stakeholders. Mongold’s flagship asset, Naran Mandal Gold Operations in Mongolia, is a high-grade, narrow-vein orogenic gold deposit.</p>
+
+<p>Mongold’s flagship asset, Naran Mandal Gold Operations in Mongolia, is a high-grade, narrow-vein orogenic gold deposit. More than 50 vein structures have been identified on the property, with only three veins currently in production. Less than 12% of the known resource is being exploited, highlighting substantial upside through further exploration, investment, and technological upgrades.</p>
+
+<p>In addition, Mongold holds 12 exploration licenses across Mongolia with potential for gold, base metals, and battery minerals.</p>
+
+<p>The company is supported by an experienced international management team operating from Singapore, Ulaanbaatar, and onsite locations. Health, safety, and environmental stewardship are non-negotiable priorities embedded across all operations.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Why Choose List Start -->
+                    
+                       
+                       
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us Section End -->
+<!-- ===================== SECTION 1 : TIMELINE ===================== -->
+<section class="section timeline-section bg-section-white" id="timelineSection">
+  <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Timeline</h3>
+                        <p class="text-anime-style-3" data-cursor="-opaque">At Mongold, we are proud of our history. We have overcome many challenges to become the company we are today. Our resilience will serve us well as our company continues to develop and grow.</p>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+  
+  <div class="timeline-scroll-container">
+    <div class="timeline-wrapper" id="timeline">
+      
+      <div class="timeline-item">
+        <h2>1950</h2>
+        <p>
+          The first scientific surveys of the Naran Mandal deposit were carried out
+          by Soviet State Russian geologists. These studies identified the presence
+          of a significant economic gold resource.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>1967</h2>
+        <p>
+          East German geologists conducted a drilling expedition and inferred an
+          economic resource on at least 8 of the 54 known veins based on shallow
+          drilling results.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>1990</h2>
+        <p>
+          The Mongolian government issued a mining license for the Naran Mandal
+          deposit, building on work carried out by Russian, German and Japanese
+          scientists.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>2003</h2>
+        <p>
+          Bayangazar LLC formed a joint venture with a Chinese partner and acquired
+          the Naran Mandal deposit. A processing plant was commissioned in 2004 and
+          mining commenced the same year.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>2011</h2>
+        <p>
+          A consortium of high net worth British and American investors formed the
+          company that would later become Mongold and began exploring gold
+          opportunities in Asian frontier markets.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>2014</h2>
+        <p>
+          Mongold acquired control of the Naran Mandal gold mine project through a
+          joint venture agreement with a local partner.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>2015</h2>
+        <p>
+          Mongold began investing into the Naran Mandal gold project, developing
+          underground mining operations and commencing plant construction.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>2017</h2>
+        <p>
+          The plant was fully commissioned and operations began. Trial production
+          commenced alongside a JORC-compliant drilling campaign. Mongold also
+          acquired 12 additional exploration licenses in Mongolia.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>2020</h2>
+        <p>
+          The processing plant capacity at the Naran Mandal Gold Operations was
+          expanded while off-mine and near-mine exploration and M&A activities
+          continued.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>2023</h2>
+        <p>
+          An ore sorter was installed and commissioned at the Naran Mandal Gold
+          Operations site, significantly increasing plant efficiency.
+        </p>
+      </div>
+
+    </div>
+  </div>
+   <!-- Our Journey Section Start -->
+    <div class="our-journey-elite">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6">
+                    <!-- Journey Image Box Start -->
+                    <div class="journey-image-box-elite wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Journey Image Start -->
+                        <div class="journey-image-elite">
+                            <figure>
+                                <img src="images/DSC03690.webp" alt="">
+                            </figure>
+                        </div>
+                        <!-- Journey Image End -->
+
+                    </div>
+                    <!-- Journey Image Box End -->
+                </div>
+
+                <div class="col-xl-6">
+                    <!-- Our Journey Content Start -->
+                    <div class="our-journey-content-elite">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Strategy</h3>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Journey Item List Start -->
+                        <div class="journey-item-list-elite">
+                            <!-- Journey Item Start -->
+                            <div class="journey-item-elite wow fadeInUp" data-wow-delay="0.2s">
+                                <h2>Expand Production and Exploration</h2>
+                                <p>Continue to increase production and exploration activities onsite at Naran Mandal, unlocking the full potential of our high-grade gold veins.</p>
+                            </div>
+                            <!-- Journey Item End -->
+
+                            <!-- Journey Item Start -->
+                            <div class="journey-item-elite wow fadeInUp" data-wow-delay="0.4s">
+                                <h2>Pursue Strategic Acquisitions</h2>
+                                <p>Look for additional acquisitions to increase the size of the company and diversify operational and geographical risk.</p>
+                            </div>
+                            <!-- Journey Item End -->
+
+                            <!-- Journey Item Start -->
+                            <div class="journey-item-elite wow fadeInUp" data-wow-delay="0.6s">
+                                <h2>Strengthen Sustainability Practices</h2>
+                                <p>Continue to develop sustainability practices in our operations and local communities, prioritizing health, safety, and environmental stewardship.</p>
+                            </div>
+                            <!-- Journey Item End -->
+                        </div>
+                        <!-- Journey Item List End -->
+                    </div>
+                    <!-- Our Journey Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Journey Section End -->
+</section>
+<footer class="main-footer bg-section dark-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-5">
+                    <!-- Footer Logo Start -->
+                    <div class="footer-logo">
+                        <img src="images/footer-logo.png" alt="">
+                    </div>
+                    <!-- Footer Logo End -->
+                </div>
+                
+               
+                
+         
+           
+
+                <div class="col-lg-12">
+                    <!-- Footer Copyright Start -->
+                    <div class="footer-copyright">
+                        <!-- Footer Copyright Text Start -->
+                        <div class="footer-copyright-text">
+                            <p>Copyright © 2025 All Rights Reserved.</p>
+                        </div>
+                        <!-- Footer Copyright Text End -->
+
+                        <!-- Footer Social Link Start -->
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Social Link End -->
+                    </div>
+                    <!-- Footer Copyright End -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+
+const timeline = document.getElementById("timeline");
+const container = document.querySelector(".timeline-scroll-container");
+
+let currentX = 0;
+
+/* ---------- MAX SCROLL ---------- */
+function maxScroll() {
+  return timeline.scrollWidth - window.innerWidth;
+}
+
+/* ---------- MOUSE WHEEL ---------- */
+window.addEventListener("wheel", (e) => {
+  if (!container.matches(":hover")) return;
+
+  currentX -= e.deltaY * 6;
+  currentX = Math.max(-maxScroll(), Math.min(0, currentX));
+  timeline.style.transform = `translateX(${currentX}px)`;
+});
+
+/* ---------- DRAG ---------- */
+let isDragging = false;
+let startX = 0;
+let startTranslate = 0;
+
+container.addEventListener("pointerdown", (e) => {
+  isDragging = true;
+  startX = e.clientX;
+  startTranslate = currentX;
+  container.classList.add("dragging");
+  container.setPointerCapture(e.pointerId);
+});
+
+container.addEventListener("pointermove", (e) => {
+  if (!isDragging) return;
+
+  const delta = e.clientX - startX;
+  currentX = startTranslate + delta;
+  currentX = Math.max(-maxScroll(), Math.min(0, currentX));
+
+  timeline.style.transform = `translateX(${currentX}px)`;
+});
+
+container.addEventListener("pointerup", (e) => {
+  isDragging = false;
+  container.classList.remove("dragging");
+  container.releasePointerCapture(e.pointerId);
+});
+
+container.addEventListener("pointerleave", () => {
+  isDragging = false;
+  container.classList.remove("dragging");
+});
+</script>
+
+ <script src="js/jquery-3.7.1.min.js"></script>
+   
+    <!-- Circle Progress Js File -->
+    <script src="js/circle-progress.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+</html>

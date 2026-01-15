@@ -1,0 +1,330 @@
+.paragg {
+    font-size: 24px;
+    max-width: 1140px;
+    display: block;
+    position: static;
+    margin: 0 auto;
+    text-align: justify
+}
+
+.paraggam {
+    display: table;
+    margin: 0 auto
+}
+
+.borderedparagg {
+    font-size: 24px;
+    max-width: 1140px;
+    display: block;
+    position: static;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: justify;
+    border-style: solid;
+    border-width: medium;
+    border-color: #eaa424;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 20px
+}
+
+.mongolia-wrap {
+    position: relative
+}
+
+.grabbing-wrap {
+    position: sticky;
+    left: 0;
+    width: 100%;
+    top: 70px;
+    display: none;
+    align-items: center;
+    justify-content: center
+}
+
+.mongolia-wrap {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.mongolia {
+    min-width: 768px;
+    margin-top: 140px;
+    position: relative
+}
+
+.mongolia img {
+    position: relative;
+    z-index: 2
+}
+
+.mongolia-companies,
+.mongolia-aimags,
+.mongolia-layers,
+.mongolia-pins {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+
+.mongolia-layers {
+    z-index: 1
+}
+
+.mongolia img {
+    z-index: 2
+}
+
+.mongolia-pins {
+    z-index: 5
+}
+
+.mongolia-aimags {
+    z-index: 4
+}
+
+.mongolia-companies {
+    z-index: 5
+}
+
+.mongolia .pin {
+    position: absolute;
+    width: 24px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(/images/placeholder-blue.png);
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1
+}
+
+.mongolia .pin-new {
+    position: absolute;
+    width: 24px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(/images/placeholder.png);;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1
+}
+
+.mongolia .pin::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    left: 0;
+    top: 2px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #eaa424;
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out
+}
+
+.mongolia .pin:hover {
+    overflow: unset;
+    z-index: 2
+}
+
+.mongolia .pin:hover::before {
+    transform: scale(2);
+    opacity: .15
+}
+
+.mongolia .pin:hover .pin-popup {
+    opacity: 1
+}
+
+.mongolia .pin-new::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    left: 0;
+    top: 2px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #eaa424;
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out
+}
+
+.mongolia .pin-new:hover {
+    overflow: unset;
+    z-index: 2
+}
+
+.mongolia .pin-new:hover::before {
+    transform: scale(2);
+    opacity: .15
+}
+
+.mongolia .pin-new:hover .pin-popup {
+    opacity: 1
+}
+
+.mongolia .pin-popup {
+    position: absolute;
+    z-index: 7;
+    opacity: 0;
+    left: 0;
+    bottom: 50px;
+    margin-left: -113px;
+    width: 250px;
+    background-color: #fff;
+    color: #121A3B;
+    font-size: .75rem;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out
+}
+
+.mongolia .pin-popup::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border-left: 10px solid #fff0;
+    border-right: 10px solid #fff0;
+    border-top: 10px solid #fff
+}
+
+.mongolia .pin-popup-head {
+    background-color: #eaa424;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 14px;
+    text-align: center
+}
+
+.mongolia .pin-popup-body {
+    padding: 20px;
+    font-size: 12px
+}
+
+.mongolia .aimag {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.mongolia .company {
+    position: absolute;
+    width: 140px;
+    margin-top: -30px
+}
+
+.mongolia .company-name {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    padding: 15px 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    font-size: .8rem;
+    font-weight: 500;
+    background-color: #121A3B;
+    z-index: 1;
+    color: #fff;
+    font-size: 24px
+}
+
+.mongolia .company.brdr-center::after,
+.mongolia .company.brdr-left::after,
+.mongolia .company.brdr-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #eaa424;
+    z-index: 0
+}
+
+.mongolia .company.brdr-center::before,
+.mongolia .company.brdr-left::before,
+.mongolia .company.brdr-right::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    z-index: 0
+}
+
+.mongolia .company.brdr-right::before {
+    right: -4px
+}
+
+.mongolia .company.brdr-right::after {
+    right: 0
+}
+
+.mongolia .company.brdr-left::before {
+    left: -4px
+}
+
+.mongolia .company.brdr-left::after {
+    left: 0
+}
+
+.mongolia .company.brdr-center .company-name {
+    margin-left: -70px
+}
+
+.mongolia .company.brdr-center::after {
+    left: 0
+}
+
+.mongolia .company.brdr-center::before {
+    left: -4px
+}
+
+.mongolia .company.bottom {
+    bottom: 0;
+    margin-bottom: -30px
+}
+
+.mongolia .company.bottom .company-name {
+    top: auto;
+    bottom: 0
+}
+
+.mongolia .company.bottom::before {
+    top: 0
+}
+
+.mongolia .company::before {
+    bottom: 0
+}
+
+@media (max-width:1024px) {
+   
+
+    
+    .paragg {
+        padding: 0;
+        position: relative;
+        margin: 0
+    }
+}

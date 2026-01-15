@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="View Mongold's office locations on our interactive map. See our corporate office in Singapore and Mongolia office in Ulaanbaatar.">
+<meta name="keywords" content="Mongold locations, office locations, Singapore office, Mongolia office, Ulaanbaatar, office map">
+<meta name="author" content="Mongold">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mongold.com/map.html">
+<meta property="og:title" content="Office Locations - Mongold | Mongolia-Singapore Map">
+<meta property="og:description" content="View Mongold's office locations in Singapore and Mongolia on our interactive map.">
+<meta property="og:image" content="https://www.mongold.com/images/logo.png">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.mongold.com/map.html">
+<meta property="twitter:title" content="Office Locations - Mongold | Mongolia-Singapore Map">
+<meta property="twitter:description" content="Explore Mongold's office locations on our interactive map.">
+<meta property="twitter:image" content="https://www.mongold.com/images/logo.png">
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.mongold.com/map.html">
+<title>Office Locations - Mongold | Mongolia-Singapore Connection Map</title>
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<style>
+  body {
+    margin: 0;
+    background:#062743;
+    font-family: Arial, sans-serif;
+  }
+
+  #map {
+    width: 100%;
+    height: 100vh;
+     background: #062743;
+  }
+
+  .map-title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    z-index: 999;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  /* PULSE CIRCLE STYLE */
+  .pulse {
+    width: 14px;
+    height: 14px;
+    background: #eaa424;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .pulse::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background: #eaa424;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(3.5);
+      opacity: 0;
+    }
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: #062743;
+    color: #fff;
+    border-radius: 8px;
+  }
+
+  .leaflet-popup-tip {
+    background: #111827;
+  }
+</style>
+</head>
+
+<body>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  const map = L.map("map", {
+    zoomControl: false,
+    scrollWheelZoom: false
+  }).setView([22, 100], 4.2
+  );
+
+  L.tileLayer(
+    "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+    {
+      attribution: "&copy; OpenStreetMap"
+    }
+  ).addTo(map);
+
+  const mongolia = [46.8625, 103.8467];
+  const singapore = [1.3521, 103.8198];
+
+  // Pulse icon
+  const pulseIcon = L.divIcon({
+    className: "",
+    html: '<div class="pulse"></div>',
+    iconSize: [14, 14]
+  });
+
+  // Mongolia marker
+  L.marker(mongolia, { icon: pulseIcon })
+    .addTo(map)
+    .bindPopup(
+      "<b>Mongolia</b><br>Strategic gateway connecting Asia and Europe."
+    );
+
+  // Singapore marker
+  L.marker(singapore, { icon: pulseIcon })
+    .addTo(map)
+    .bindPopup(
+      "<b>Singapore</b><br>Global logistics hub for international trade."
+    );
+
+</script>
+
+</body>
+</html>
